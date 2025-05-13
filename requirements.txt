@@ -4,3 +4,5 @@ torch
 Pillow
 sentencepiece 
 gunicorn
+timm 
+einops
