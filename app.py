@@ -117,14 +117,14 @@ def run_inference_from_notebook(image_input, task_prompt_str, text_input_str=Non
 @app.route('/')
 def home():
     if not model_loaded_successfully and model is None: # Henüz yükleme denenmediyse veya başarısız olduysa
-        load_florence_model()
+        #load_florence_model()
     status = "Model Yüklendi" if model_loaded_successfully else "Model Yüklenemedi veya Henüz Yüklenmedi"
     return f"Florence-2 API (Jupyter Entegrasyonu) Hoş Geldiniz! Model Durumu: {status}"
 
 @app.route('/generate_caption', methods=['POST'])
 def generate_caption_endpoint():
     if not model_loaded_successfully and model is None:
-        load_florence_model() # İlk istekte modeli yüklemeyi dene
+        #load_florence_model() # İlk istekte modeli yüklemeyi dene
 
     if not model_loaded_successfully:
         return jsonify({"error": "Florence-2 modeli kullanılamıyor. Sunucu loglarını kontrol edin."}), 500
