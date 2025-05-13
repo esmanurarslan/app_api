@@ -3,4 +3,4 @@ transformers
 torch
 Pillow
 sentencepiece 
-torchvision 
+gunicorn
